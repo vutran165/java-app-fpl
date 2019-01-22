@@ -4,6 +4,7 @@ import java.sql.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -17,7 +18,9 @@ import javax.persistence.Table;
 public class Player {
 
     @Id
-    // @GeneratedValue(strategy = )
+    @GeneratedValue(strategy = GenerationType.AUTO)
+
+    public Long id;
     public String id_Player;
     public String name;
     public String club;
